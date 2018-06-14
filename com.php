@@ -5,7 +5,7 @@ $conn = null;
 function db_connect(){
     global $conn;
     if (!$conn){
-        $conn = mysqli_connect('localhost', 'root', '') 
+        $conn = mysqli_connect('localhost', 'root', '123') 
                 or die ('Không thể kết nối CSDL');
 		mysqli_select_db($conn,'cafe');
     
