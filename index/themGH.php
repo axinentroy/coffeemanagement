@@ -1,0 +1,28 @@
+<?php
+	session_start();
+	$id=$_GET["id"];
+	$sl=0;
+	if(isset($_SESSION["cart"]["$id"]))
+	{
+		$sl=$_SESSION["cart"]["$id"]+1;
+	}
+	else
+	{
+		$sl=1;
+	}
+	$_SESSION["cart"]["$id"]=$sl;
+	$loai=$_GET["loai"];
+	if($loai==1)
+	{
+		header("location:index.php?pape=menu#bar");
+	}
+	if($loai==2)
+	{
+		header("location:index.php?pape=donong#bar");
+	}
+	if($loai==3)
+	{
+		header("location:index.php?pape=doan#bar");
+	}
+	
+?> 

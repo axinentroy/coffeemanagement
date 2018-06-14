@@ -1,0 +1,39 @@
+
+
+/* style content8 */
+ #content{
+	 padding-top:50px;
+	 padding-bottom:30px;
+ }
+ .form{
+	 margin:20px 0;
+ }
+ .title-table{
+	 color:#ab5c27;
+	 
+ }
+ .btn-color{
+	 color:white;
+	 background-color:#ab5c27;
+ }
+ .title{
+	 color:#ab5c27;
+ }
+ .ds-bl{
+	 width:20px;
+ }
+ .form img{
+	 width:20px;
+ }
+#showLoi{
+	font-size:15px;
+	line-height:50px;
+	text-align:center;
+	font-weight:none;
+	color:#1d1818;
+	 border-radius: 5px;
+}
+img{
+	width:20px; 
+	margin-right:15px;
+}

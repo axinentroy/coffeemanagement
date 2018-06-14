@@ -1,0 +1,80 @@
+
+
+/*content*/
+.bar-logo p {
+	font-weight: bold;
+	color:#ab5c27;
+	font-size: 25px;
+	font-family: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
+}
+/*style info */
+	#info{
+		padding:80px 0;
+		
+	}
+	.content-info {
+		text-align:center;
+
+	}
+	.content-info h2{
+		color:#ab5c27;
+		font-weight:bold;
+	}
+	.content-info p{
+		color:#371904;
+	}
+
+/* style button */
+	.button-color{
+		background-color:#ab5c27;
+		color:white;
+		padding: 10px;
+		margin: 10px;
+		font-weight:bold;
+	}
+/* style bar du */
+	.bar-du p{
+		font-size:27px;
+		line-height:80px;
+		font-weight:bold;
+
+	}
+	.bar-du{
+		background:url(http://imageshack.com/a/img923/1008/aKEvyW.jpg) no-repeat;
+		height:80px;
+		color: white;
+		text-align: center;
+		font-size: 23px;
+	}
+/* style thuc don */
+	#thucdon{
+		padding-top:40px;
+		padding-bottom:20px;
+	}
+	#item2{
+		padding-top:30px;
+		
+	}
+	#thucdon img:hover{
+		transform:scale(1.2);
+	}
+	#thucdon img{
+		border-radius:15%;
+		-moz-border-radius:15%;
+		-webkit-border-radius:15%;
+	}
+
+/* style text-td */
+	#inf-thucdon h4{
+		color:#ab5c27;
+		font-weight:bold;
+
+	}
+	#inf-thucdon{
+		padding-bottom:20px;
+	}
+	#inf-thucdon p{
+		color: #371904
+	}
+
+
