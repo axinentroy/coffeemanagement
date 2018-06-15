@@ -2,7 +2,7 @@
 		<div class="container">
 		<div class="row">
 			<div class="col-sm-6  img-info">
-				<img class="img-responsive" src="../hinh/grad5.png">
+				<img class="img-responsive" src="http://imageshack.com/a/img923/478/udvSyU.png">
 			</div>
 			<div class="col-sm-6 content-info">
 				<h2>GradCafe</h2>

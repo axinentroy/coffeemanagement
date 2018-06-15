@@ -10,7 +10,6 @@
 		
 		$sql="Insert Into khuyenmai(TenKM,TienGiam,TriGiaApDung,NgayKetThuc,NgayBatDau) Values ('$ten',$giam,$ap,'$kt','$bd')";
 		db_execute($sql);
-		header("location:http://localhost:8888/cafe/index/nv.php?pape=khuyenmai");
 	}
 ?>
 	<div id="content">

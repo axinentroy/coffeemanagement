@@ -37,6 +37,9 @@
 					<div class="col-sm-1">
 						<button type="submit" name="submitTim" class="btn-color btn">Tìm kiếm</button>
 					</div>
+					<div class="pull-right">
+						<a href="nv.php?pape=thembl"><button type="button" name="submitThem" class="btn  btn-color">Thêm Biên Lai</button></a>
+					</div>
 				</div>
 			</form>
 			
@@ -66,9 +69,9 @@
 						<td><?php echo $resulf["TenKH"] ?></td> 
 						<td><?php echo $resulf["DiaChi"] ?></td> 
 						<td><?php echo $resulf["SDT"] ?></td> 
-						<td><a href="nv.php?pape=suabl&id=<?php echo $resulf['MaPG'] ?>" ><img data-toggle="tooltip" data-placement="bottom" title="Sửa" src="../hinh/grad24.png"></a></td>
-						<td><a onclick="return confirm('Bạn có chắc chắn muốn xoá?')" href="nv.php?pape=xoabl&id=<?php echo $resulf['MaPG'] ?>"> <img  data-toggle="tooltip" data-placement="bottom" title="Xoá" src="../hinh/grad23.png"></a></td>
-						<td><a id="thanhtoan" target="_blank" onclick="return confirm('Bạn có chắc chắn muốn thanh toán?')" href="nv.php?pape=thanhtoan&id=<?php echo $resulf['MaPG'] ?>"><img  data-toggle="tooltip" data-placement="bottom" title="Thanh toán" src="../hinh/grad26.png"></a></td>
+						<td><a href="nv.php?pape=suabl&id=<?php echo $resulf['MaPG'] ?>" ><img data-toggle="tooltip" data-placement="bottom" title="Sửa" src="http://imageshack.com/a/img922/557/225SXm.png"></a></td>
+						<td><a onclick="return confirm('Bạn có chắc chắn muốn xoá?')" href="nv.php?pape=xoabl&id=<?php echo $resulf['MaPG'] ?>"> <img  data-toggle="tooltip" data-placement="bottom" title="Xoá" src="http://imageshack.com/a/img922/3700/uYzTxM.png"></a></td>
+						<td><a id="thanhtoan" target="_blank" onclick="return confirm('Bạn có chắc chắn muốn thanh toán?')" href="nv.php?pape=thanhtoan&id=<?php echo $resulf['MaPG'] ?>"><img  data-toggle="tooltip" data-placement="bottom" title="Thanh toán" src="http://imageshack.com/a/img923/6374/NZ1LYA.png"></a></td>
 					</tr>
 			<?php
 				}
@@ -76,7 +79,7 @@
 				</table>
 			</div>
 		</div>
-	</div>
+	</div><!-- end biên lai--->
 <script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){

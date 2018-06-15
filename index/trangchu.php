@@ -3,7 +3,7 @@
 		<div class="container ">
 			<div class="row">
 				<div class="col-xs-12 col-sm-6  img-info">
-					<img class="img-responsive" src="hinh/grad5.png">
+					<img class="img-responsive" src="http://imageshack.com/a/img923/478/udvSyU.png">
 				</div>
 				<div class="col-xs-12 col-sm-6 content-info">
 					<h2>GradCafe</h2>
@@ -15,26 +15,26 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div><!---end inf--->
 	<div class="container-fuild bar-du" >
 		<p>MENU</p>
-	</div>
+	</div><!--end bar du -->
 	<div id="thucdon">
 	<div class="container">
 		<div id="item1">
 		
 			<div class="row">
 				<div class="col-xs-6 col-sm-3">
-					<a href="http://localhost:8888/cafe/index.php?pape=menu#bar"><img class="img-responsive" src="hinh/grad8.png"></a>
+					<img class="img-responsive" src="http://imageshack.com/a/img922/1408/JbP08h.png">
 				</div>
 				<div class="col-xs-6 col-sm-3">
-					<a href="http://localhost:8888/cafe/index.php?pape=menu#bar"><img class="img-responsive" src="hinh/grad27.png"></a>
+					<img class="img-responsive" src="http://imageshack.com/a/img922/120/IZbUz7.png">
 				</div>
 				<div class="col-xs-6 col-sm-3">
-					<a href="http://localhost:8888/cafe/index.php?pape=doan#bar"><img class="img-responsive" src="hinh/grad18.png"></a>
+					<img class="img-responsive" src="http://imageshack.com/a/img922/6651/2JEDO5.png">
 				</div>
 				<div class="col-xs-6 col-sm-3">
-					<a href="http://localhost:8888/cafe/index.php?pape=doan#bar"><img class="img-responsive" src="hinh/grad9.png"></a>
+					<img class="img-responsive" src="http://imageshack.com/a/img924/1323/fEwlK5.png">
 				</div>
 			</div>
 	
@@ -42,41 +42,41 @@
 		<div id="item2">
 			<div class="row">
 				<div class="col-xs-4 col-sm-2">
-					<a href="http://localhost:8888/cafe/index.php?pape=menu#bar"><img class="img-responsive" src="hinh/grad21.png"></a>
+					<img class="img-responsive" src="http://imageshack.com/a/img922/4531/ZzdTPB.png">
 				</div>
 				<div class="col-xs-4 col-sm-2">
-					<a href="http://localhost:8888/cafe/index.php?pape=menu#bar"><img class="img-responsive" src="hinh/grad17.png"></a>
+					<img class="img-responsive" src="http://imageshack.com/a/img923/426/FIrNSH.png">
 				</div>
 				<div class="col-xs-4 col-sm-2">
-					<a href="http://localhost:8888/cafe/index.php?pape=menu#bar"><img class="img-responsive" src="hinh/grad15.png"></a>
+					<img class="img-responsive" src="http://imageshack.com/a/img922/9577/UhZCpl.png">
 				</div>
 				<div class="col-xs-4 col-sm-2">
-					<a href="http://localhost:8888/cafe/index.php?pape=doan#bar"><img class="img-responsive" src="hinh/grad22.png"></a>
+					<img class="img-responsive" src="http://imageshack.com/a/img923/4678/qgTGcC.png">
 				</div>
 				<div class="col-xs-4 col-sm-2">
-					<a href="http://localhost:8888/cafe/index.php?pape=doan#bar"><img class="img-responsive" src="hinh/grad14.png"></a>
+					<img class="img-responsive" src="http://imageshack.com/a/img921/8546/5TwEG1.png">
 				</div>
 				<div class="col-xs-4 col-sm-2">
-					<a href="http://localhost:8888/cafe/index.php?pape=doan#bar"><img class="img-responsive" src="hinh/banh2.png"></a>
+					<img class="img-responsive" src="http://imageshack.com/a/img921/8370/dHLxHC.png">
 				</div>
 			</div>
 		</div>
 	</div>
-	</div>
+	</div><!--- end td--->
 	<div id="inf-thucdon">
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 col-sm-6">
 					<h4>ĐỒ UỐNG</h4>
-					<p>Với nhiều đồ uống phong phú mới lạ cách thức độc đáo cùng với những nguyên liệu tươi ngon rất mong sẽ làm hài lòng quý khách</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu nisi et nunc pellentesque ultricies. Nunc hendrerit non nulla ac sagittis. Quisque mi metus, vehicula et nunc sit amet, elementum gravida diam. In sed tincidunt odio, vehicula egestas ligula. Nulla facilisi. Pellentesque id magna eget orci semper</p>
 				</div>
 				<div class="col-xs-12 col-sm-6">
 					<h4>ĐỒ ĂN NHẸ</h4>
-					<p>Với nhiều món ngon mới mẻ hấp dẫn như bánh ngọt Schocolate,bơ tươi rất mong làm hài lòng quý khách</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu nisi et nunc pellentesque ultricies. Nunc hendrerit non nulla ac sagittis. Quisque mi metus, vehicula et nunc sit amet, elementum gravida diam. In sed tincidunt odio, vehicula egestas ligula. Nulla facilisi. Pellentesque id magna eget orci semper</p>
 					
 				</div>
 			</div>
 		</div>
-	</div>
+	</div><!--end text-td-->
 
 	

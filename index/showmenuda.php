@@ -20,8 +20,8 @@
 	?>
 	
 		<div class="col-sm-4 dl-item">
-			<div class="logo-oder"><a href="themGH.php?id=<?php echo $row_show["MaMon"]?>&loai=<?php echo $row_show["MaLoaiMon"]; ?>"><img src="http://imageshack.com/a/img924/3904/48Vl6z.png"></a></div>
-			<div class="img-du"><a href="themGH.php?id=<?php echo $row_show["MaMon"]?>&loai=<?php echo $row_show["MaLoaiMon"]; ?>"><img class="img-responsive" src="../hinh/<?php echo $row_show["HinhAnh"];?>"></a></div>
+			<div class="logo-oder"><a href="index/themGH.php?id=<?php echo $row_show["MaMon"]?>&loai=<?php echo $row_show["MaLoaiMon"]; ?>"><img src="http://imageshack.com/a/img924/3904/48Vl6z.png"></a></div>
+			<div class="img-du"><a href="index/themGH.php?id=<?php echo $row_show["MaMon"]?>&loai=<?php echo $row_show["MaLoaiMon"]; ?>"><img class="img-responsive" src="hinh/<?php echo $row_show["HinhAnh"];?>"></a></div>
 			<div class="title-du"><?php echo $row_show["TenMon"]; ?></div>
 			<div class="price"><?php echo $row_show["Gia"];?><?php echo ".000 VND"; ?></div>
 		</div>

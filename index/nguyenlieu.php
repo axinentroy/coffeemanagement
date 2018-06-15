@@ -20,7 +20,7 @@
 	<div id="nguyenlieu">
 		<div class="container">
 			<div id="nl-tittle">
-				<h1>SẢN PHẨM CÒN TRONG KHO</h1>
+				<h1>NGUYÊN LIỆU CÒN TRONG KHO</h1>
 			</div>
 			<hr>
 			<form method="get">
@@ -34,14 +34,15 @@
 					</div>
 					<div class="pull-right">
 						<a href="nv.php?pape=nhaphang"><button type="button" class="btn  btn-color">Nhập hàng</button></a>
+						<a href="nv.php?pape=xuathang"><button type="button" class="btn  btn-color">Xuất hàng</button></a>
 					</div>
 				</div>
 			</form>
 			<div class="col-sm-12 ds-nl">
 				<table class="table table-hover">
 					<tr>
-						<td class="tittle-table" >Mã Nhập</td>
-						<td class="tittle-table">Tên Sản Phẩm</td>
+						<td class="tittle-table" >Mã Nguyên Liệu</td>
+						<td class="tittle-table">Tên Nguyên Liệu</td>
 						<td class="tittle-table">Giá</td>
 						<td class="tittle-table">Số Lượng</td>
 					</tr>

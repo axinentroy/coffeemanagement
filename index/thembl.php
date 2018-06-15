@@ -2,7 +2,7 @@
 <?php
 	include("../com.php");
 	db_connect();
-	$sql_menu="Select * From loaimon";
+	$sql_menu="Select * From menu";
 	$query_menu=db_execute($sql_menu);
 ?>
 
@@ -18,14 +18,14 @@
 			</div>
 			<hr>
 			<div class="row">
-				<div class=" col-sm-offset-2 col-sm-5" id="showLoi">
+				<div class=" col-sm-offset-2 col-sm-4" id="showLoi">
 				</div>
 			</div>
 
 			<div class="row form">
 				<div class="form-group">
 					<label  class="col-sm-2 control-label">Mã Biên Lai</label>
-					<div class="col-sm-5">
+					<div class="col-sm-4">
 					  <input type="text" disabled="disabled" class="form-control" name="inputMa" id="inputMa" placeholder="Mã biên lai">
 					</div>
 				</div>
@@ -33,7 +33,7 @@
 			<div class="row form">
 				<div class="form-group">
 					<label class="col-sm-2 control-lable">Ngày lập </label>
-					<div class="col-sm-5">
+					<div class="col-sm-4">
 						<input type="text" id="showTG" class="form-control" name="inputNgay">
 					</div>
 				</div>
@@ -45,32 +45,25 @@
 				<div class="form-group">
 					<label class="col-sm-2 control-label">Đồ uống</label>
 					<div class="col-sm-2">
-						<select class="form-control" id="itemLoaiDU" onclick="resetLoi()">
-						  <option value =0 >Chọn loại đồ uống</option>
+						<select class="form-control" id="itemDU" name="dsDU" onclick="resetLoi()">
+						  <option value =0 >Chọn đồ uống</option>
 						<?php
 							while($row_menu=mysqli_fetch_array($query_menu))
 							{
 						?>
-								<option value="<?php echo $row_menu["MaLoaiMon"];?>"><?php echo $row_menu["TenLoaiMon"];?></option>
+								<option value="<?php echo $row_menu["MaMon"];?>"><?php echo $row_menu["TenMon"];?></option>
 						 <?php 
 							}
 						?>
 						</select>
 					
 					</div>
-					<div class="col-sm-2">
-						<select class="form-control" name="dsDU" id="itemDU">
-							<option value="0">Chọn đồ uống</option>
-						</select>
-					</div>
 					<div class="col-sm-1">
 						<input type="number" value="1" class="form-control" name="inputSL" id="inputSL" placeholder="SL" onfocus="resetLoi()" >
 					</div>	
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-sm-offset-4 col-sm-1">
-					<button type="submit" name="submitThem" class="btn  btn-color" onclick="return add()">Thêm</button>
+					<div class="col-sm-1">
+						<button type="submit" name="submitThem" class="btn  btn-color" onclick="return ktra()">Thêm</button>
+					</div>
 				</div>
 			</div>
 <?php
@@ -94,7 +87,7 @@
 		header("location:http://localhost:8888/cafe/index/nv.php?pape=thembl#showTG");
 	}
 ?>			<div class="row form">
-				<div class="col-sm-offset-2 col-sm-5">
+				<div class="col-sm-offset-2 col-sm-4 ">
 					<table id="showTable" class="table table-hover" name="showTable">
 						<tr>
 							
@@ -122,7 +115,7 @@ if(isset($_SESSION["item"]))
 							
 							<td><a href="xoa_item_bl.php?mon=<?php echo $key;?>" onclick="return confirm('Bạn có chắc chắn muốn xoá?')" >
 								<img  data-toggle="tooltip" data-placement="bottom" title="Xoá"
-								src="../hinh/grad23.png"></a></td>
+								src="http://imageshack.com/a/img922/3700/uYzTxM.png"></a></td>
 						</tr>
 <?php 
 	}
@@ -134,11 +127,6 @@ if(isset($_SESSION["item"]))
 	$ma_km=$kq_km["MaKM"];
 	$thanhtoan=(int)$tong -(int)$kq_km['km'];
 	
-	$tienkm=$kq_km["km"];
-	if($tienkm=='')
-	{
-		$tienkm=0;
-	}
 
 
 ?>
@@ -148,31 +136,30 @@ if(isset($_SESSION["item"]))
 			<div class="row form">
 				<div class="form-group">
 					<label  class="col-sm-2 control-label">Tổng tiền</label>
-					<div class="col-sm-5">
+					<div class="col-sm-4">
 					  <input type="text" name="inputTT" class="form-control" value="<?php echo $tong; ?>.000 VNĐ" id="inputTT" placeholder="Tổng tiền" >
 					</div>
 				</div>
 			</div>
 			<div class="row form">
-
 				<div class="form-group">
 					<label  class="col-sm-2 control-label">Tiền giảm (Khuyến mãi)</label>
-					<div class="col-sm-5">
-					  <input type="text" name="inputKM" class="form-control" value="<?php echo $tienkm; ?>.000 VNĐ" id="inputKM" >
+					<div class="col-sm-4">
+					  <input type="text" name="inputKM" class="form-control" value="<?php echo $kq_km["km"]; ?>.000 VNĐ" id="inputKM" placeholder="Tiền được giảm">
 					</div>
 				</div>
 			</div>
 			<div class="row form">
 				<div class="form-group">
 					<label  class="col-sm-2 control-label">Thanh toán</label>
-					<div class="col-sm-5">
+					<div class="col-sm-4">
 					  <input type="text" name="inputTien" class="form-control"  value="<?php echo $thanhtoan; ?>.000 VNĐ" id="inputTien" placeholder="Tổng tiền thanh toán">
 					</div>
 				</div>
 			</div>
 			
 			<div class="row form ">
-				<div class="col-sm-offset-3 col-sm-2">
+				<div class="col-sm-offset-2 col-sm-2">
 					<a href="nv.php?pape=bienlai"><button type="button" name="submitHuy" class="btn  btn-color">Huỷ Biên Lai</button></a>
 				</div>
 				<div class="col-sm-2">
@@ -207,17 +194,8 @@ if(isset($_SESSION["item"]))
 	
 	}
 ?>	
- <script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
-<script language="javascript">
 
-	$(document).ready(function(){
-		$("#itemLoaiDU").change(function(){
-			var value=$(this).val();
-			$.get("showdsdu.php",{loai:value},function(data){
-				$("#itemDU").html(data);
-			});
-		});
-	});
+<script language="javascript">
 	function ktr(){
 		var tt=document.getElementById("inputTT").value;
 		if(tt=='')
@@ -251,41 +229,34 @@ if(isset($_SESSION["item"]))
 		  var kt=1;
 		  var objectDU=document.getElementById("itemDU");
 		  var du=objectDU.options[objectDU.selectedIndex].text;
-		  var checkdu=objectDU.options[objectDU.selectedIndex].value;
 		  var mValue=objectDU.value.split(" ");
 		  var sl=document.getElementById("inputSL").value;
 		  
 		  if(sl<0)
 		  {
 			  kt=0;
-			  alert("Nhập lại số lượng đồ uống");
 			  document.getElementById("showLoi").innerHTML="Nhập lại số lượng đồ uống!";
 			  document.getElementById("showLoi").style.height="50px";
 				document.getElementById("showLoi").style.background="#d8ab86";
-				return false;
 		  }
 		  if(sl=='')
 		  {	
 			kt=0;
-				alert("Nhập lại số lượng đồ uống");
 			  document.getElementById("showLoi").innerHTML="Nhập lại số lượng đồ uống!";
 			  document.getElementById("showLoi").style.height="50px";
 				document.getElementById("showLoi").style.background="#d8ab86";
-				return false;
 		  }
 			  
 		  var sl=parseInt(sl);
 		  var table=document.getElementById("showTable");
 		  var r=table.rows.length;
 		  var check=0;
-		  if(checkdu ==0)
+		  if(du =='Chọn đồ uống')
 		  {
-		  		alert("Chọn lại đồ uống");
 				kt=0;
 				document.getElementById("showLoi").innerHTML="Chưa chọn đồ uống!";
 				document.getElementById("showLoi").style.height="50px";
 				document.getElementById("showLoi").style.background="#d8ab86";
-				return false;
 		  }
 		  if(kt==1)
 			{
@@ -329,7 +300,6 @@ if(isset($_SESSION["item"]))
 				
 				document.getElementById("inputTT").value=showTT;
 			}
-			return true;
 	  
 	}
 	
@@ -357,10 +327,6 @@ if(isset($_SESSION["item"]))
 		 
 	 }
 	function ktra(){
-		alert("thanh");
-		 var objectDU=document.getElementById("itemDU");
-		var du=objectDU.options[objectDU.selectedIndex].value;
-		  alert(du);
 		var sl=document.getElementById("inputSL").value;
 		if(sl<0||sl=='')
 		{

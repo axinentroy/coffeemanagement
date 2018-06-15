@@ -10,8 +10,8 @@ error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED);
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>GradCafe</title>
-	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/grad.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<?php
 		switch($_GET["pape"])
@@ -65,8 +65,9 @@ error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED);
 	db_close();
 	
 ?>
-
+<!-- show của login --->
 <div class="general">
+
 	<div class="form-login xora">
 		<h3 class="title-form" align="center"> ĐĂNG NHẬP</h3>
 		<hr>
@@ -112,60 +113,6 @@ error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED);
 			</form>
 		</div>
 	</div><!-- end show -->
-	
-	<div class="form-register">
-		<h3 class="title-form" align="center"> ĐĂNG KÝ</h3>
-		<hr>
-		<div class="container">
-			<form role="form" method="post">
-				<div class="row form">
-				
-					<label for="inputEmail3" class="col-sm-offset-2 col-sm-3 control-label">TÊN ĐĂNG KÝ</label>
-					<div class="col-sm-5">
-					  <input type="type" class="form-control" name="inputTen" id="inputTen" placeholder="--Tên đăng nhập--">
-					</div>
-				 
-				 </div>
-				 <div class="row form">
-				
-					<label for="inputEmail3" class="col-sm-offset-2 col-sm-3 control-label">MẬT KHẨU</label>
-					<div class="col-sm-5">
-					  <input type="type" class="form-control" name="inputTen" id="inputTen" placeholder="--Mật khẩu--">
-					</div>
-				 
-				 </div>
-				 <div class="form row">
-				  <div class="form-group">
-					<label for="inputPassword3" class="col-sm-offset-2 col-sm-3 control-label">XÁC NHẬN MẬT KHẨU</label>
-					<div class="col-sm-5">
-					  <input type="password" class="form-control" name="inputPass" placeholder="--Mật khẩu--">
-					</div>
-				  </div>
-				 </div>
-				 <div class="form row">
-				  <div class="form-group">
-					<div class="col-sm-offset-5 col-sm-6">
-					  <div class="checkbox">
-						<label>
-						  <input type="checkbox"> Ghi nhớ
-						</label>
-					  </div>
-					</div>
-				  </div>
-				 </div>
-				 <div class="form row">
-				  <div >
-					<div class="col-sm-offset-6 col-sm-1">
-						<button type="submit" class="close-resgiter btn btn-color">Huỷ</button>
-					</div>
-					<div class="col-sm-2">
-						<button type="submit"  name="submitLogin" class="btn-color btn">Đăng nhập</button>
-					</div>
-				  </div>
-				 </div>
-			</form>
-		</div>
-	</div><!-- end show -->
 <?php 
 	$cart=0;
 	if(isset($_SESSION["cart"]))
@@ -180,20 +127,20 @@ error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED);
 						<div class="row">
 							<div class=" text-align">
 								<div id="color-gh" data-toggle="modal" data-target="#myModal">
-									<h5 id="chickGH" slcart="<?php echo $cart; ?>" ><a>Giỏ hàng:  <img class="img-reponsive logo-gh" src="hinh/gh.png"></a> <?php echo $cart;?>	</h5>
-								</div>
+									<h5 id="chickGH" slcart="<?php echo $cart; ?>" ><a>Giỏ hàng:  <img class="img-reponsive logo-gh" src="http://imageshack.com/a/img924/3062/wwt0K8.png"></a> <?php echo $cart;?>	</h5>
+								</div><!--end giao hang --->
 							</div>
 						</div>
 						<div class="row">
 							<div class=" text-center">
-								<a href="#" data-toggle="tooltip" data-placement="bottomz" title="Instagram" ><img class="img-responsive " src="hinh/grad 1.png"></a>
+								<a href="#" data-toggle="tooltip" data-placement="bottomz" title="Instagram" ><img class="img-responsive " src="http://imageshack.com/a/img923/2285/jigtZt.png"></a>
 							</div>
 							<div class="col-sm-6 text-center">
-								<a href="#" data-toggle="tooltip" data-placement="bottomz" title="Facebook" ><img class="img-responsive" src="hinh/grad2.png"></a>
+								<a href="#" data-toggle="tooltip" data-placement="bottomz" title="Facebook" ><img class="img-responsive" src="http://imageshack.com/a/img924/325/nNKz2O.png"></a>
 							</div>
 						</div>
 					</div>
-				</div>
+				</div><!-- end note --->
 			
 		</div>
 	</div>
@@ -234,7 +181,7 @@ error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED);
 						</div>
 						<div class="col-sm-5 form">
 							<div class="row form">
-								<label class=" col-sm-5 control-label">Sản phẩm:</label>
+								<label class=" col-sm-5 control-label">Tên món:</label>
 								<div class="col-sm-7">
 									<?php echo $row["TenMon"]; ?>
 								</div>
@@ -265,7 +212,7 @@ error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED);
 					
 					<div class="row form">
 						<div class="form-group">
-							<label  class="col-sm-offset-1 col-sm-5 control-label" padding-top="20px">Tổng tiền: <input type="text" class="form-control col-sm-3" id="showTT" value="<?php echo $tt.".000 VNĐ"; ?>" name="inputTT" disabled>
+							<label  class="col-sm-offset-1 col-sm-5 control-label">Tổng tiền: <input type="text" class="form-control col-sm-3" id="showTT" value="<?php echo $tt.".000 VNĐ"; ?>" name="inputTT">
 						</div>
 					</div>
 <?php
@@ -273,8 +220,8 @@ error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED);
 ?>
 					
 				<div class="modal-footer">
-					<a href="index/index.php?pape=menu#menu-dl"><button type="button" name="submitTT" class="btn btn-color" data-dismiss="modal">Tiếp tục chọn</button></a>
-					<button type="submit" name="submitGH" class="btn btn-color" onclick="tinhTT()">Thanh Toán</button>
+					<a href="index.php?pape=menu#menu-dl"><button type="button" name="submitTT" class="btn btn-color" data-dismiss="modal">Tiếp tục chọn</button></a>
+					<button type="submit" name="submitGH" class="btn btn-color" onclick="tinhTT()">Giao hàng</button>
 				</div>
 			</form>
 			</div>
@@ -325,14 +272,13 @@ error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED);
 				</div>
 				<div class="pull-right">
 					<ul>
-						<li><a href="#"data-toggle="tooltip" data-placement="bottomz" title="Instagram" ><img src="hinh/grad 1.png"></a>&nbsp 
-						<a href="#"data-toggle="tooltip" data-placement="bottomz" title="Facebook" ><img src="hinh/grad2.png"></a></li>
+						<li><a href="#"data-toggle="tooltip" data-placement="bottomz" title="Instagram" ><img src="http://imageshack.com/a/img923/1218/Vszuao.png"></a>&nbsp 
+						<a href="#"data-toggle="tooltip" data-placement="bottomz" title="Facebook" ><img src="http://imageshack.com/a/img924/7131/UreeVx.png"></a></li>
 						<li class="a-color"> <a href="#" data-toggle="tooltip" data-placement="bottomz" title="Ngôn ngữ">VN/EN</a></li>
 						<li class="a-color login">
 							<a href="#">
 							  Đăng nhập</a>
 						</li>
-						<li class="a-color register">Đăng ký</li>
 					</ul>
 				</div>
 			</div>
@@ -343,7 +289,7 @@ error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED);
 			<div class="row">
 				<div class="col-xs-12 col-sm-12" >
 					<div id="logo" class="text-center" >
-						<img src="hinh/img-logo.png">
+						<img src="http://imageshack.com/a/img924/5995/cg3Bw1.png">
 					</div>
 				</div>
 				
@@ -354,7 +300,7 @@ error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED);
 	<div class="stickyheader">	
 	  <ul>
 		<li><a href="index.php">TRANG CHỦ</a></li>
-		<li><a href="index.php?pape=menu#bar">SẢN PHẨM</a></li>
+		<li><a href="index.php?pape=menu#bar">MENU</a></li>
 		<li><a href="#">KHUYẾN MÃI</a></li>
 		<li><a href="#">LIÊN HỆ</a></li>
 		<li><a href="#">GÓP Ý</li>
@@ -375,20 +321,23 @@ error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED);
 		  <!-- Wrapper for slides -->
 		  <div class="carousel-inner">
 			<div class="item active">
-			  <img class="img-responsive"  src="hinh/img-01.png" >
+			  <img class="img-responsive"  src="http://imageshack.com/a/img924/6097/AOANiO.jpg" >
 			</div>
 			<div class="item">
-			  <img class="img-responsive"  src="hinh/img-02.png">
+			  <img class="img-responsive"  src="http://imageshack.com/a/img924/2029/8FKEZ4.jpg">
+			</div>
+			<div class="item">
+			  <img class="img-reponsive"  src="http://imageshack.com/a/img922/9923/KFXvyC.jpg">
 			</div>
 			
 		  </div>
 
 		  <!-- Controls -->
 		  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-			<span class="glyphicon"><img src="hinh/left.png" alt=""></span> 
+			<span class="glyphicon glyphicon-chevron-left"></span>
 		  </a>
 		  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-			<span class="glyphicon"><img src="hinh/right.png" alt=""> </span>
+			<span class="glyphicon glyphicon-chevron-right"></span>
 		  </a>
 		</div>
 	</div><!-- end slider menu -->
@@ -396,20 +345,20 @@ error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED);
 		<div class="row">
 			<div class="container">
 				<div class="col-xs-12 col-sm-4 delivery">
-					<h5><img class="responsive" src="hinh/grad13.png">
+					<h5><img class="responsive" src="http://imageshack.com/a/img923/5720/BaPigc.png">
 					GIAO HÀNG MIỄN PHÍ</h5>
 				</div>
 				<div class=" col-xs-12 col-sm-4 hotline">
-					<h5><img class="responsive" src="hinh/grad20.png">
+					<h5><img class="responsive" src="http://imageshack.com/a/img922/5772/k6Fs4i.png">
 					HOTLINE: 0905 421 421</h5>
 				</div>
 				<div class="col-xs-12 col-sm-4 address">
-					<h5><img class="responsive" src="hinh/grad19.png">
+					<h5><img class="responsive" src="http://imageshack.com/a/img922/7015/pyNHwB.png">
 					64 LINH TRUNG - THỦ ĐỨC</h5>
 				</div>
 			</div>
 		</div>
-	</div >
+	</div ><!--end bar--->
 	<div id="content">
 		<?php
 		switch($_GET["pape"])
@@ -444,9 +393,8 @@ error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED);
 		</div>
 	</div><!--footer-->
 </div>
-<script src="js/jquery-3.2.1.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script>	
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+	<script type="text/javascript">	
 	$(document).ready(function(){
 		$(".buttonXoa").click(function(){
 			var id=$(this).attr("mamon");
@@ -479,7 +427,7 @@ error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED);
 	
 	
 </script>
-
-<script src="js/grad.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/grad.js"></script>
 </body>
 </html>

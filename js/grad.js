@@ -1,16 +1,12 @@
-$(document).ready(function(){
+$(function(){
     $('.login').click(function(){
         $('.form-login').removeClass('xora');
-    });
+    })
 	$('.close-dn').click(function(){
 		$('.form-login').toggleClass('xora');
-	});
-	$('.register').click(function(){
-		$('.form-register').css("display","block");
-	});
-	
+	})
 });
-$(document).ready(function(){
+$(function(){
         // Check the initial Poistion of the Sticky Header
         var stickyHeaderTop = $('.stickyheader').offset().top;
  

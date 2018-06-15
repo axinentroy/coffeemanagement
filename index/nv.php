@@ -69,10 +69,10 @@ error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED);
 				  <ul class="nav navbar-nav pull-right color">
 					
 					<li class="dropdown">
-					  <a href="#" class="dropdown-toggle" data-toggle="dropdown">QL GIAO HÀNG <span class="caret"></span></a>
+					  <a href="#" class="dropdown-toggle" data-toggle="dropdown">QL BÁN HÀNG <span class="caret"></span></a>
 					  <ul class="color-dropdown">
-						<li><a href="nv.php?pape=bienlai">ĐANG CHỜ</a></li>
-						<li><a href="nv.php?pape=hoadon">ĐÃ GIAO</a></li>
+						<li><a href="nv.php?pape=bienlai">BIÊN LAI</a></li>
+						<li><a href="nv.php?pape=hoadon">HOÁ ĐƠN</a></li>
 					  </ul>
 					</li>
 					<li >
@@ -82,9 +82,9 @@ error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED);
 					<li >
 					  <a href="#" class="dropdown-toggle" data-toggle="dropdown">ADMIN <span class="caret"></span></a>
 					  <ul class=" color-dropdown">
-						<li><a href="nv.php?pape=ql-menu">QL SẢN PHẨM</a></li>
+						<li><a href="nv.php?pape=ql-menu">QL MENU</a></li>
 						<li><a href="nv.php?pape=khuyenmai">KHUYẾN MÃI</a></li>
-						<li><a href="nv.php?pape=nguyenlieu" >QL NHẬP HÀNG</a></li>
+						<li><a href="nv.php?pape=nguyenlieu" >QL NGUYÊN LIỆU</a></li>
 						
 					  </ul>
 					</li>
@@ -92,7 +92,7 @@ error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED);
 			  </div>
 			  <div class="color pull-left">
 				
-					<a href="nv.php"><img class="img-responsive" src="../hinh/img-logo-02.png"></a>
+					<a href="nv.php"><img class="img-responsive" src="http://imageshack.com/a/img922/9946/KmgsWY.png"></a>
 					
 			  </div>
 			</div>

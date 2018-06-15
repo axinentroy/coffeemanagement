@@ -37,7 +37,7 @@
 					<tr>
 						<td class="tittle-table">Mã Hoá Đơn</td>
 						<td class="tittle-table">Mã Khuyến Mãi</td>
-						<td class="tittle-table">Ngày Giao</td>
+						<td class="tittle-table">Ngày Lập</td>
 						<td class="tittle-table">Trị Giá</td>
 					</tr>
 			<?php 

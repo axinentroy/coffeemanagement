@@ -53,16 +53,16 @@
 				<div class="form-group">
 					<label class="col-sm-2 control-label">Ngày lập</label>
 					<div class="col-sm-4">
-						<input type="text" id="showTG" value="<?php echo date('Y-m-d');?>" class="form-control" name="inputNgay">
+						<input class ="form-control" name="inputNL" type="date" id="showDay">
 					</div>
 				</div>
 			</div>
 			<div class="row form">
 				<div class="form-group">
-					<label class="col-sm-2 control-label">Sản Phẩm</label>
+					<label class="col-sm-2 control-label">Nguyên liệu</label>
 					<div class="col-sm-2" >
 						<select class="form-control" id="dsNL" name="inputNL" onclick="resetLoi()">
-						  <option value="0">Chọn Sản Phẩm</option>
+						  <option value="0">Chọn nguyên liệu</option>
 		<?php 
 			while($row=mysqli_fetch_array($query))
 			{
@@ -93,7 +93,7 @@
 				<div class="col-sm-offset-2 col-sm-4 ">
 					<table class="table table-hover" id="showTable">
 						<tr>
-							<td class="title-table">Tên Sản Phẩm</td>
+							<td class="title-table">Tên nguyên liệu</td>
 							<td class="title-table">Số lượng</td>
 							<td class="title-table">Giá</td>
 							<td class="title-table">Xoá</td>
@@ -118,7 +118,7 @@
 							<td><?php echo $tien ?></td>
 							<td><a href="xoa_ct_nh.php?nl=<?php echo $key;?>" onclick="return confirm('Bạn có chắc chắn muốn xoá?')" >
 								<img  data-toggle="tooltip" data-placement="bottom" title="Xoá"
-								src="../hinh/grad23.png"></a></td>
+								src="http://imageshack.com/a/img922/3700/uYzTxM.png"></a></td>
 						</tr>
 <?php 
 		}
@@ -172,7 +172,7 @@
 				$sl_new=$slg+$row_nl["SoLuong"];
 				$gia_new=($tien*$slg+$row_nl["DonGia"]*$row_nl["SoLuong"])/($slg+$row_nl["SoLuong"]);
 				$tt=$tien*$slg;
-				$sql_ct="Insert Into ctphieunhap(MaPN,MaNL,DonGia,SoLuong) Values ($id,$key,$tien,$slg)";
+				$sql_ct="Insert Into ctphieunhap(MaPN,MaMon,DonGia,SoLuong) Values ($id,$key,$tien,$slg)";
 				db_execute($sql_ct);	
 				$sql_update="UPDATE nguyenlieu SET SoLuong=$sl_new , DonGia=$gia_new WHERE MaNL=$key";
 				db_execute($sql_update);
@@ -186,7 +186,6 @@
 		
 	}
 ?>
- <script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
 <script language="javascript">
 	function check()
 	{
@@ -209,7 +208,7 @@
 		}
 		var gia=document.getElementById("inputGia").value;
 		
-		if(gia<0||gia=="")
+		if(gia<0||sl=="")
 		{
 			document.getElementById("showLoi").innerHTML="Nhập lại giá nguyên liệu!";
 			document.getElementById("showLoi").style.height="50px";

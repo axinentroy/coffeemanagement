@@ -1,9 +1,8 @@
 <?php
 	include("../com.php");
 	db_connect();
-	$mysql="select * from khuyenmai ORDER BY NgayKetThuc DESC";
+	$mysql="select * from khuyenmai";
 	$query=mysqli_query($conn,$mysql);
-	$day= date('Y-m-d');
 	
 ?>
 	<div id="nguyenlieu">
@@ -32,9 +31,8 @@
 						<td class="tittle-table">Tiền Giảm</td>
 						<td class="tittle-table">Ngày Bắt Đầu</td>
 						<td class="tittle-table">Ngày Kết Thúc</td>
-						<td class="tittle-table">Trình trạng</td>
 						<td class="tittle-table">Sửa Khuyến Mãi</td>
-						<td class="tittle-table">Xoá Khuyến Mãi</td>	
+						<td class="tittle-table">Xoá Khuyến Mãi</td>
 					</tr>
 			<?php
 				while($result=mysqli_fetch_array($query))
@@ -46,17 +44,9 @@
 						<td><?php echo $result["TriGiaApDung"] ?></td>
 						<td><?php echo $result["TienGiam"] ?></td>
 						<td><?php echo $result["NgayBatDau"] ?></td>
-						<td class="DayEnd"><?php echo $result["NgayKetThuc"] ?></td>
-					<?php
-						if($result["NgayKetThuc"]< $day)
-						{
-							echo "<td color ='red'>Hết hạn</td>";
-						}
-						else
-							echo "<td color='blue'>Còn khuyến mãi</td>";
-					?>	
-						<td><img data-toggle="tooltip" data-placement="bottom" title="Sửa" src="../hinh/grad24.png"></a></td>
-						<td><img data-toggle="tooltip" data-placement="bottom" title="Xoá" src="../hinh/grad23.png"></td>
+						<td><?php echo $result["NgayKetThuc"] ?></td>
+						<td><img data-toggle="tooltip" data-placement="bottom" title="Sửa" src="http://imageshack.com/a/img922/557/225SXm.png"></a></td>
+						<td><img data-toggle="tooltip" data-placement="bottom" title="Xoá" src="http://imageshack.com/a/img922/3700/uYzTxM.png"></td>
 					</tr>
 			<?php
 				}
@@ -66,9 +56,5 @@
 				</table>
 			</div>
 		</div>
-	</div>
-<script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
-<script>
-	
-</script>
+	</div><!-- end biên lai--->
 	

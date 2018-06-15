@@ -113,7 +113,7 @@
 					<input type="submit" class="btn  btn-color" value="Huỷ" name="submitHuy" />
 				</div>
 				<div class="col-sm-2 text-center ">
-					<input type="submit" class="btn  btn-color" value="Sửa Đồ Uống"  onclick ="return confirm('Bạn có chắc chắn muốn sửa ko?');" name="submitSua" />
+					<input type="submit" class="btn  btn-color" value="Sửa Đồ Uống"  onclick ="return confirm('Bạn có chắc chắn muốn xoá  ko?');" name="submitSua" />
 				</div>
 			</div>
 		</form>

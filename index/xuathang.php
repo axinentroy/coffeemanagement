@@ -58,7 +58,7 @@
 				<div class="form-group">
 					<label class="col-sm-2 control-label">Ngày lập</label>
 					<div class="col-sm-4">
-						<input type="text" class="form-control"  id="showDay" name="inputNgay">
+						<input type="date" class="form-control" placeholder="DD/MMMM/YYYY" id="showDay" name="inputNgay">
 					</div>
 				</div>
 			</div>
@@ -112,7 +112,7 @@
 							<td> <?php echo $value."/".$row_ten["DonViTinh"]; ?></td>
 							<td><a href="xoa_ct_xh.php?nl=<?php echo $key;?>" onclick="return confirm('Bạn có chắc chắn muốn xoá?')" >
 								<img  data-toggle="tooltip" data-placement="bottom" title="Xoá"
-								src="../hinh/grad23.png"></a></td>
+								src="http://imageshack.com/a/img922/3700/uYzTxM.png"></a></td>
 						</tr>
 <?php 
 		}
@@ -178,7 +178,6 @@
 		}
 	}
 ?>
- <script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
 <script language="javascript">
 	function check()
 	{

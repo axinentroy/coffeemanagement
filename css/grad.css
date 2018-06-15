@@ -1,9 +1,5 @@
 *{
 	font-size:13px;
-
-}
-.glyphicon img{
-	margin-top:300px;
 }
 .buttonXoa{
 	    color: white;
@@ -16,11 +12,6 @@
 }.infoGH{
 	padding-left:20px;
 }
-.bar-logo {
-	font-weight: bold;
-	color:#FFFFFF;
-	font-size: 25px;
-}
 #showTT{
 	font-size:14px;
 	color:black;
@@ -29,12 +20,13 @@
 /* style bar */
 	#bar{
 		background-color:#ab5c27;
-		overflow-x: hidden;
+		
 		color:white;
 		padding: 5px;
+	}
+	#bar{
 		font-weight:bold;
 	}
-
 	#bar img{
 		padding-right:10px;
 		width: 40px;
@@ -83,12 +75,11 @@
 		right: 0px;
 		height:150px;
 		width: 15%;
-		background: url("../hinh/grad12.png")no-repeat;
+		background: url(http://imageshack.com/a/img924/8176/zoMQjG.png)no-repeat;
 		color:white;
 		font-weight:bold;
 
 	}
-	
 	#note h5{
 		font-weight:bold;
 	}
@@ -103,12 +94,8 @@
 	#color-gh{
 		margin:10px;
 	}
-	.item-cart img{
-		width: 100px;
-		height: 140px;
-	}
 /* style sub menu */
-	#s{
+	#sub-menu{
 		background-color: #e1ccbe;
 		color:black;
 		font-weight:bold;
@@ -122,7 +109,6 @@
 		color:#ab5c27;
 	}
 	.pull-right ul li{
-		cursor: pointer;
 		list-style:none;
 		display:inline-table;
 		width:100px;
@@ -168,13 +154,7 @@
 		padding:5px;
 		background-color:#ab5c27;
 	}
-	.form-register {
-		display: none;
-	}
 	.xora{
-		display:none;
-	}
-	.xo-register{
 		display:none;
 	}
 	.btn-color{
@@ -301,7 +281,17 @@
 	}
 	
 /* style note */
-	
+	#note{
+		position: fixed;
+		top: 200px;
+		z-index: 999;
+		right: 0px;
+		height: 70px;
+		width: 100;
+		background: url(http://imageshack.com/a/img924/8176/zoMQjG.png)no-repeat;
+		color:white;
+		font-weight:bold;
+	}
 	#note h5{
 		font-weight:bold;
 	}

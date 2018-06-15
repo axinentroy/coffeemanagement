@@ -10,11 +10,22 @@
 ?>
 <div id="content">
 	<div id="menu-du">
+		<div class="container">
+		<div class="row">
+			<div class="col-sm-12 stickyheader">
+				<ul>
+					<li><a href="nv.php?pape=menu">ĐỒ UỐNG LẠNH</a></li>
+					<li><a href="nv.php?pape=donong">ĐỒ UỐNG NÓNG</a></li>
+					<li><a href="nv.php?pape=doan">ĐỒ ĂN NHẸ</a>
+				</ul>	
+				</div>
+			</div>
+		</div>
 		<div class="stickyalias"></div>
 		<div class="container">
 	
 			<div class="pull-right">
-				<a href="nv.php?pape=themDU"><button type="button" class="btn  btn-color">Thêm Sản Phẩm</button></a>
+				<a href="nv.php?pape=themDU"><button type="button" class="btn  btn-color">Thêm Đồ Uống</button></a>
 			</div>
 
 		</div>

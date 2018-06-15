@@ -3,9 +3,9 @@
 	
 	include_once("com.php");
 	db_connect();
-	$sql="Select * From menu Where MaLoaiMon='3' Limit 0,6";
+	$sql="Select * From menu Where MaLoaiMon='3' Limit 0,8";
 	$query=mysqli_query($conn,$sql);
-	$sql_t="Select * From menu Where MaLoaiMon=3";
+	$sql_t="Select * From menu Where MaLoaiMon=2";
 	$query_t=mysqli_query($conn,$sql_t);
 	$tong_sp=mysqli_num_rows($query_t);
 ?>
@@ -37,8 +37,8 @@
 			?>
 			
 				<div class="col-sm-4 dl-item">
-					<div class="img-du"><a href="themGH.php?id=<?php echo $row["MaMon"]?>&loai=<?php echo $row["MaLoaiMon"]; ?>"><img  class="img-responsive" src="hinh/<?php echo $row["HinhAnh"];?>"></a></div>
-					<div class="logo-oder"><a href="themGH.php?id=<?php echo $row["MaMon"]?>&loai=<?php echo $row["MaLoaiMon"]; ?>"><img src="hinh/grad11.png"></a></div>
+					<div class="img-du"><a href="index/themGH.php?id=<?php echo $row["MaMon"]?>&loai=<?php echo $row["MaLoaiMon"]; ?>"><img  class="img-responsive" src="hinh/<?php echo $row["HinhAnh"];?>"></a></div>
+					<div class="logo-oder"><a href="index/themGH.php?id=<?php echo $row["MaMon"]?>&loai=<?php echo $row["MaLoaiMon"]; ?>"><img src="http://imageshack.com/a/img924/3904/48Vl6z.png"></a></div>
 					<div class="title-du"><?php echo $row["TenMon"]; ?></div>
 					<div class="price"><?php echo $row["Gia"];?><?php echo ".000 VND"; ?></div>
 				</div>
@@ -59,8 +59,7 @@
 <script type="text/javascript"> 
 	var trang=1;
 	var tongsp=$("#tongsp").val();
-	var sotrang= Math.ceil(tongsp/6);
-	
+	var sotrang= Math.ceil(tongsp/8);
 	if(trang==sotrang)
 	{
 		document.getElementById("showThem").style.display="none";
@@ -69,7 +68,7 @@
 	$(document).ready(function(){
 		$("#showThem").click(function(){
 			 trang=trang+1;
-			$.get("showmenuda.php",{loai:3,trang:trang,sotrang:6},function(data){
+			$.get("index/showmenu.php",{loai:1,trang:trang},function(data){
 				$("#menu-dl").append(data);
 			});
 			if(trang==sotrang)
